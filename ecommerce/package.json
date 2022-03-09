@@ -1,0 +1,50 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "build": "NODE_ENV=production cd public/assets && cleancss -o main.min.css main.css",
+    "dev": "nodemon index",
+    "dev:inspect": "nodemon --inspect index",
+    "dev:debug": "DEBUG=express:*,app:* npm run dev",
+    "debug": "DEBUG=express:*,app:* npm run start",
+    "test": "mocha  test/routes_api_products_test.js --timeout 50000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ang36/e-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ang36/e-commerce/issues"
+  },
+  "homepage": "https://gitlab.com/ang36/e-commerce#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@sentry/node": "^6.17.9",
+    "@sentry/tracing": "^6.17.9",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.2",
+    "passport": "^0.5.2",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.5.2",
+    "mocha": "^9.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
